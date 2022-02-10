@@ -15,6 +15,10 @@ export class ButtonComponent {
 
   @Input() btnLabel: string;
 
+  @Input() icon?: string;
+
+  @Input() iconOnly?: boolean;
+
   constructor() {
     // Initialization inside the constructor
     this.btnStyling = 'secondary';
