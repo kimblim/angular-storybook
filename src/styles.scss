@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+$font-path: '~dkfds/src/fonts/IBMPlexSans/';
+$image-path: '~dkfds/src/img';
+$site-image-path: '~dkfds/src/img';
+$icons-folder-path: '~dkfds/src/img/svg-icons';
+
+@import '~dkfds/dist/scss/dkfds-virkdk.scss';
