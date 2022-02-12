@@ -1,9 +1,22 @@
 import { Component, Input } from '@angular/core';
-
 @Component({
   selector: 'dkfds-button',
-  templateUrl: './button.component.html',
+  //templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
+  template: `
+    <button class="button" [ngClass]="'button-' + [btnStyling]">
+      <ng-template
+        [ngIf]="btnStyling === 'unstyled' && iconOnly === true"
+        [ngIfElse]="styled"
+      >
+        <span class="sr-only">{{ btnLabel }}</span>
+      </ng-template>
+
+      <ng-template #styled>
+        {{ btnLabel }}
+      </ng-template>
+    </button>
+  `,
 })
 export class ButtonComponent {
   @Input() btnStyling:
